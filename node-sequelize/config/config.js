@@ -15,7 +15,7 @@ const loadConfig = () => {
         // ###########  BD Config
         process.env.URLDB = process.env.MONGO_URI ? process.env.MONGO_URI : `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
     } else {
-        sdotenv.config({ path: path.join(__dirname, './.env') });
+        dotenv.config({ path: path.join(__dirname, './.env') });
         process.env.URLDB = process.env.MONGO_URI ? process.env.MONGO_URI : `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
 
     }
