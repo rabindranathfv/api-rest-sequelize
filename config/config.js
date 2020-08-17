@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 
 
 const loadConfig = () => {
+    console.log('carga dinamica de DB');
     console.log('load node process env', process.env.NODE_ENV);
     if (process.env.NODE_ENV === 'prod') {
         console.log('running production');
