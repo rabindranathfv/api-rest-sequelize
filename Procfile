@@ -1,1 +1,1 @@
-web: node node-sequelice/app.js
+web: node app.js
