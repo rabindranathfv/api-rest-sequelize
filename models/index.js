@@ -11,7 +11,7 @@ const db = {};
 
 loadConfig();
 
-console.log('DB CONFIG::', process.env.DATABASE_URL, process.env.DB_USER);
+console.log('DB CONFIG::', process.env.DATABASE_URL);
 let sequelize;
 if (config.use_env_variable) {
     sequelize = new Sequelize(
