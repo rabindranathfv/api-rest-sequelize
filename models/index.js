@@ -14,15 +14,7 @@ loadConfig();
 console.log('DB CONFIG::', process.env.DATABASE_URL);
 let sequelize;
 if (config.use_env_variable) {
-    sequelize = new Sequelize(
-        process.env.DB_NAME,
-        process.env.DB_USER,
-        process.env.DB_PASSW,
-        {
-            host: process.env.DB_HOST,
-            dialect: process.env.DIALECT
-        }
-    );
+    sequelize = new Sequelize(process.env.DATABASE_URL);
 } else {
     console.log(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSW);
     sequelize = new Sequelize(
