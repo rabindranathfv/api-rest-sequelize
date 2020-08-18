@@ -4,23 +4,20 @@
         "password": "123456",
         "database": "postgres",
         "host": "127.0.0.1",
-        "dialect": "postgres",
-        "use_env_variable": "DATABASE_URL"
+        "dialect": "postgres"
     },
     "staging": {
         "username": "postgres",
         "password": "123456",
         "database": "node_sequelize",
         "host": "127.0.0.1",
-        "dialect": "postgres",
-        "use_env_variable": "DATABASE_URL"
+        "dialect": "postgres"
     },
     "production": {
         "username": "postgres",
         "password": "123456",
         "database": "node_sequelize",
         "host": "127.0.0.1",
-        "dialect": "postgres",
-        "use_env_variable": "DATABASE_URL"
+        "dialect": "postgres"
     }
 }

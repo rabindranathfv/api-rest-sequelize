@@ -5,8 +5,6 @@ const dotenv = require('dotenv');
 
 
 const loadConfig = () => {
-    console.log('carga dinamica de DB');
-    console.log('load node process env', process.env.NODE_ENV);
     if (process.env.NODE_ENV === 'prod') {
         console.log('running production');
         dotenv.config({ path: path.join(__dirname, './.env.prod') });
@@ -18,7 +16,7 @@ const loadConfig = () => {
     } else {
         dotenv.config({ path: path.join(__dirname, './.env') });
         process.env.URLDB = process.env.MONGO_URI ? process.env.MONGO_URI : `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
-
+        process.env.DATABASE_URL = process.env.DATABASE_URL ? process.env.DATABASE_URL : `${process.env.DATABASE_URL}`;
     }
 }
 
