@@ -12,7 +12,6 @@
         "migration-dev-undo-all": "sequelize db:migrate:undo:all --env 'development'",
         "migration-prod": "sequelize db:migrate --env 'production'",
         "migration-prod-undo-all": "migration-dev-undo-all": "sequelize db:migrate:undo:all --env 'production'"
-
     },
     "dependencies": {
         "body-parser": "^1.13.3",
